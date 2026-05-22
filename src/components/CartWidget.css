@@ -1,0 +1,34 @@
+
+.cart-widget {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #495057;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.cart-widget:hover {
+  color: #3498db;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+}
+
+.cart-count {
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  position: absolute;
+  top: -8px;
+  right: -12px;
+}

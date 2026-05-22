@@ -1,0 +1,273 @@
+
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e9ecef;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1.5rem;
+  height: 70px;
+  gap: 1rem;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  font-size: 1.75rem;
+}
+
+.logo-text {
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Menú de navegación - scroll horizontal visible */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0.5rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  flex: 1;
+  justify-content: flex-start;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar siempre visible */
+.nav-menu::-webkit-scrollbar {
+  height: 6px;
+  display: block;
+}
+
+.nav-menu::-webkit-scrollbar-track {
+  background: #e9ecef;
+  border-radius: 4px;
+}
+
+.nav-menu::-webkit-scrollbar-thumb {
+  background: #3498db;
+  border-radius: 4px;
+}
+
+.nav-menu::-webkit-scrollbar-thumb:hover {
+  background: #2980b9;
+}
+
+/* Elementos del menú - tamaño optimizado para que quepan más */
+.nav-li {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.link-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #495057;
+  font-weight: 500;
+  font-size: 0.7rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  gap: 0.25rem;
+  min-width: 52px;
+  text-align: center;
+}
+
+/* Íconos SVG más pequeños para que quepan más */
+.icon-nav {
+  width: 20px;
+  height: 20px;
+  transition: all 0.2s ease;
+  color: #6c757d;
+}
+
+.link-nav:hover {
+  background-color: #f8f9fa;
+  color: #3498db;
+}
+
+.link-nav:hover .icon-nav {
+  color: #3498db;
+  transform: translateY(-2px);
+}
+
+/* Enlace activo */
+.link-nav.active {
+  color: #3498db;
+  background-color: #ebf5ff;
+}
+
+.link-nav.active .icon-nav {
+  color: #3498db;
+}
+
+/* Botones de scroll */
+.scroll-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  border: 1px solid #e9ecef;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: #6c757d;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.scroll-btn:hover {
+  background-color: #f8f9fa;
+  color: #3498db;
+  border-color: #3498db;
+}
+
+/* Widget del carrito */
+.cart-widget {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #495057;
+  position: relative;
+  transition: color 0.2s ease;
+  padding: 0.5rem;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.cart-widget:hover {
+  color: #3498db;
+  background-color: #f8f9fa;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+}
+
+.cart-count {
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+/* Botón menú hamburguesa (mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .link-nav {
+    min-width: 48px;
+    padding: 0.5rem;
+    font-size: 0.65rem;
+  }
+  
+  .icon-nav {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .scroll-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  .scroll-btn {
+    display: none;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: white;
+    width: 80%;
+    max-width: 280px;
+    height: calc(100vh - 70px);
+    transition: 0.3s ease;
+    padding: 1rem;
+    gap: 0.25rem;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 999;
+  }
+  
+  .nav-menu.active {
+    left: 0;
+  }
+  
+  .link-nav {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    min-width: auto;
+  }
+  
+  .icon-nav {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .navbar-container {
+    padding: 0 1rem;
+    gap: 0.5rem;
+  }
+}

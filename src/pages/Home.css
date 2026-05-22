@@ -1,0 +1,106 @@
+
+.home-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Banner principal */
+.hero-banner {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.hero-banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-banner p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.hero-subtitle {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #ffd700;
+}
+
+/* Sección de productos destacados */
+.destacados-section {
+  padding: 1rem 0 2rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.section-description {
+  text-align: center;
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+/* Loading y errores */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #ecf0f1;
+  border-top-color: #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error-container {
+  text-align: center;
+  padding: 3rem;
+  color: #e74c3c;
+}
+
+.sin-productos {
+  text-align: center;
+  padding: 3rem;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  color: #6c757d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 2rem 1rem;
+  }
+  
+  .hero-banner h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-banner p {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.4rem;
+  }
+}

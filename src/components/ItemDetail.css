@@ -1,0 +1,108 @@
+
+.item-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.detail-imagen {
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 400px;
+}
+
+.detail-imagen img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.detail-info {
+  padding: 2rem;
+}
+
+.detail-nombre {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.detail-categoria {
+  display: inline-block;
+  background-color: #ecf0f1;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.detail-precio {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #27ae60;
+  margin: 1rem 0;
+}
+
+.detail-descripcion {
+  color: #555;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+.detail-especificaciones {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.detail-especificaciones h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.detail-especificaciones ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.detail-especificaciones li {
+  padding: 0.3rem 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.detail-especificaciones li::before {
+  content: "✓ ";
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.detail-stock {
+  color: #27ae60;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .item-detail {
+    grid-template-columns: 1fr;
+  }
+  
+  .detail-nombre {
+    font-size: 1.4rem;
+  }
+  
+  .detail-precio {
+    font-size: 1.5rem;
+  }
+}

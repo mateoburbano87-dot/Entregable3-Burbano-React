@@ -1,0 +1,63 @@
+
+.item-count {
+  margin-top: 1.5rem;
+}
+
+.count-controles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.count-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #dee2e6;
+  background-color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.count-btn:hover:not(:disabled) {
+  background-color: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.count-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.count-numero {
+  font-size: 1.2rem;
+  font-weight: bold;
+  min-width: 40px;
+  text-align: center;
+}
+
+.count-agregar {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.count-agregar:hover:not(:disabled) {
+  background-color: #219a52;
+}
+
+.count-agregar:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}

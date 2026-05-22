@@ -1,0 +1,72 @@
+
+.item-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.item-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.item-imagen {
+  height: 200px;
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+.item-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.item-card:hover .item-imagen img {
+  transform: scale(1.05);
+}
+
+.item-info {
+  padding: 1rem;
+}
+
+.item-nombre {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #2c3e50;
+}
+
+.item-categoria {
+  font-size: 0.75rem;
+  color: #6c757d;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+.item-precio {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.item-boton {
+  display: block;
+  text-align: center;
+  background-color: #f8f9fa;
+  color: #3498db;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.item-boton:hover {
+  background-color: #3498db;
+  color: white;
+}
